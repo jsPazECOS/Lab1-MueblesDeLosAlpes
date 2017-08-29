@@ -74,7 +74,7 @@ public class Vendedor
     
     @PostConstructor
     public void postConstructor(){
-        
+        System.out.println("Despues del constructor vendedor");
     }
 
 }

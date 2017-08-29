@@ -68,7 +68,7 @@ public class Mueble {
     
     @PostConstructor
     public void postConstructor(){
-        
+        System.out.println("Despues del constructor mueble");
     }
     
 }
