@@ -34,8 +34,10 @@ public class CodigoInserciones
         Init c = (Init) annotacion;
         for (Field f : claseRepresentada.getDeclaredFields()) {
             try {
-                f.setAccessible(true);
-                if (f.getType().equals(Integer.TYPE))
+                if(f.isAnnotationPresent(NoInit.class)){
+                 continue;   
+                }
+                f.setAccessible(true);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               if (f.getType().equals(Integer.TYPE))
                 {
                     f.set(instance, c.Integer());
                 } else if (f.getType().equals(Double.TYPE))

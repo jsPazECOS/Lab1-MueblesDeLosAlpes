@@ -47,6 +47,7 @@ public class ManejadorMuebles {
      */
     public Mueble nuevoMueble() {
         Mueble nuevo = (Mueble)Driver.instanciar(Mueble.class);
+        nuevo.reiniciar();
         nuevo.setId(idGenerator++);
         muebles.add(nuevo);
         return nuevo;
